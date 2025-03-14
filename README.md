@@ -56,6 +56,8 @@ holiday, shops_closed, school_holidays → Calendar-based features
 
 ✔ Merged sales_train.csv, inventory.csv, and calendar.csv → sales_train_full.csv   
 ✔ Merged sales_test.csv, inventory.csv, and calendar.csv → sales_test_full.csv    
+    **- sales_train_full : 4007419 rows * 25 columns**  
+    **- sales_test_full : 47021 rows * 23 columns**     
 ✔ Handled missing values   
 ✔ No duplicates   
 ✔ Negative discounts interpreted as no discount (per competition guidelines)   
