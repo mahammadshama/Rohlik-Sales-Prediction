@@ -14,38 +14,38 @@ This competition focuses on predicting sales for the next 14 days using historic
 
 ## 📂 Dataset Description
 
-The dataset consists of multiple files providing information about historical sales, inventory, and calendar events:
+The dataset consists of multiple files providing information about historical sales, inventory, and calendar events:    
 
-**sales_train.csv → Historical sales data**
+**sales_train.csv → Historical sales data**     
 
-**sales_test.csv → Test data without target variable**
+**sales_test.csv → Test data without target variable**    
 
-**inventory.csv → Product and warehouse details**
+**inventory.csv → Product and warehouse details**    
 
-**calendar.csv → Holiday and event details**
+**calendar.csv → Holiday and event details**    
 
-**test_weights.csv → Weights for final metric computation**
+**test_weights.csv → Weights for final metric computation**    
 
 
 ## 🔹 Key Features
 
-sales → Target variable (sales volume per product & warehouse)
+sales → Target variable (sales volume per product & warehouse)    
 
-sell_price_main → Selling price
+sell_price_main → Selling price    
 
-total_orders → Number of orders (provided for both train & test)
+total_orders → Number of orders (provided for both train & test)     
 
-type_0_discount, type_1_discount, … → Promotional discounts
+type_0_discount, type_1_discount, … → Promotional discounts     
 
-holiday, shops_closed, school_holidays → Calendar-based features
+holiday, shops_closed, school_holidays → Calendar-based features     
 
 
 ---
 
 ## 🥇 My Rank & Score
 
-✅ Rank: 206 / 777
-✅ Leaderboard Score (WMAE): 19.89490
+✅ Rank: 206 / 777    
+✅ Leaderboard Score (WMAE): 19.89490    
 
 
 ---
@@ -54,15 +54,15 @@ holiday, shops_closed, school_holidays → Calendar-based features
 
 **📌 Data Preprocessing**
 
-✔ Merged sales_train.csv, inventory.csv, and calendar.csv → sales_train_full.csv
-✔ Merged sales_test.csv, inventory.csv, and calendar.csv → sales_test_full.csv
-✔ Handled missing values
-✔ No duplicates
-✔ Negative discounts interpreted as no discount (per competition guidelines)
+✔ Merged sales_train.csv, inventory.csv, and calendar.csv → sales_train_full.csv   
+✔ Merged sales_test.csv, inventory.csv, and calendar.csv → sales_test_full.csv    
+✔ Handled missing values   
+✔ No duplicates   
+✔ Negative discounts interpreted as no discount (per competition guidelines)   
 
 **📌 Feature Engineering**
 
-🔹 Created additional features based on sales,discount and dates.
+🔹 Created additional features based on sales,discount and dates.   
 
 **📌 Model Training**
 
@@ -77,7 +77,7 @@ holiday, shops_closed, school_holidays → Calendar-based features
 
 The competition uses Weighted Mean Absolute Error (WMAE):
 
-WMAE = \frac{\sum |y_{\text{true}} - y_{\text{pred}}| \times \text{weight}}{\sum \text{weight}}
+WMAE = (Σ (w_i * |y_i - ŷ_i|)) / (Σ w_i)
 
 
 ---
